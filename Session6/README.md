@@ -2,7 +2,7 @@
 ### Submission by:
 1. Sachin Dangayach (sachin.dangayach@gmail.com)
 
-***[Link for colab file](https://colab.research.google.com/drive/13-mpSe80XXG69Pz3y1SOP7HQmekAyggw?usp=sharing)***
+***[Link for colab file](https://colab.research.google.com/drive/1yYliDdo2Tf6rmWDKDBDPAixfnHkjlDmy?usp=sharing)***
 
 # Objective
 
@@ -26,23 +26,49 @@ We aim to build a network that would:
 
 
 # Data
+1. We load the tweet.csv file in dataframe explore the dataset
+![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/dataset.png)
 
+
+2. We clean the data and create the datasets with 70:30 train test split, and created the vocabs
 
 
 # The Network / Model - Architecture
 
+We have created as language model which is also a language model as it looks the entire sentence before predicting the sentiments.
+below are the three classes-
 
+1. Encoder : We have used LSTMCell here so that we can unroll the RNN word by word for a given tweet. We collect the output and stack them. The final hidden state and cell state are returned along with output
+![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/encoder.png)
 
-# The Network / Model - Loss Function
+2. Decoder : Decoder takes the output from encoder as input along with last hidden and cell state as initial hidden and cell states. It runs for 1 step and its hidden state is fed to a Fully connected layer to give the output prediction vector.
+![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/decoder.png)
 
+3. Seq2Seq : It connects both encode and decoder and results the prediction vector
+![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/seq2seq.png)
 
+# The Network parameters
+
+- Training hyperparameters
+    - num_epochs = 1
+    - learning_rate = 0.001
+    - batch_size = 8
+
+-  Model hyperparameters
+    - input_size_encoder = len(TEXT.vocab)
+    - input_size_decoder = 64 # Hidden dimention for output
+    - output_size = len(LABEL.vocab)
+    - encoder_embedding_size = 32
+    - cell_state_size = 64
+    - hidden_size = 64
+    - num_layers = 1
 
 # The training
+Model achieves above 70% accuracy in less than 5 epochs
+- Training Log
+![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/Train_Logs.png)
 
-
-
-### ACCURACY ACHIEVED -
-
-
+- Accuracy and Loss plots
 
 ### Model results on manually / test dataset
+![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/output.png)
