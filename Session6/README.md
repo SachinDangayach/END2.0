@@ -27,8 +27,8 @@ We aim to build a network that would:
 
 # Data
 1. We load the tweet.csv file in dataframe explore the dataset
-![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/dataset.png)
 
+![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/dataset.png)
 
 2. We clean the data and create the datasets with 70:30 train test split, and created the vocabs
 
@@ -66,9 +66,11 @@ below are the three classes-
 # The training
 Model achieves above 70% accuracy in less than 5 epochs
 - Training Log
+
 ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/Train_Logs.png)
 
 - Accuracy and Loss plots
+![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/Acc_Loss_plotss.png)
 
 ### Model results on manually / test dataset
 ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/output.png)
