@@ -5,3 +5,4 @@
 ## Session 3: [PyTorch](https://github.com/SachinDangayach/END2.0/tree/main/Session3)
 ## Session 4: [RNNs & LSTMs](https://github.com/SachinDangayach/END2.0/tree/main/Session4)
 ## Session 5: [First Hands-on](https://github.com/SachinDangayach/END2.0/tree/main/Session5)
+## Session 5: [GRUs, Seq2Seq and Introduction to Attention Mechanism](https://github.com/SachinDangayach/END2.0/tree/main/Session6)

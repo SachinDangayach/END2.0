@@ -67,10 +67,11 @@ below are the three classes-
 Model achieves above 70% accuracy in less than 5 epochs
 - Training Log
 
-![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/Train_Logs.png)
+![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/Train_logs.png)
 
 - Accuracy and Loss plots
-![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/Acc_Loss_plotss.png)
+
+![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/Acc_Loss_plots.png)
 
 ### Model results on manually / test dataset
 ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/output.png)
