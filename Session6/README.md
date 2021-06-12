@@ -50,7 +50,7 @@ below are the three classes-
 # The Network parameters
 
 - Training hyperparameters
-    - num_epochs = 1
+    - num_epochs = 5
     - learning_rate = 0.001
     - batch_size = 8
 
