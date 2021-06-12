@@ -2,7 +2,7 @@
 ### Submission by:
 1. Sachin Dangayach (sachin.dangayach@gmail.com)
 
-***[Link for colab file](https://colab.research.google.com/drive/1yYliDdo2Tf6rmWDKDBDPAixfnHkjlDmy?usp=sharing)***
+***[Link for colab file](https://colab.research.google.com/drive/1H2mb4kvQLa8vYGCW2QTdI5Svi8aEzIM3?usp=sharing)***
 
 # Objective
 
@@ -50,7 +50,7 @@ below are the three classes-
 # The Network parameters
 
 - Training hyperparameters
-    - num_epochs = 5
+    - num_epochs = 10
     - learning_rate = 0.001
     - batch_size = 8
 
@@ -74,4 +74,5 @@ Model achieves above 70% accuracy in less than 5 epochs
 ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/Acc_Loss_plots.png)
 
 ### Model results on manually / test dataset
-![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/output.png)
+![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/output1.png)
+![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/output2.png)
