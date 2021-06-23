@@ -159,13 +159,17 @@ We followed following steps to build a model which can generate a similar questi
 
   ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part2B/img1.PNG)
 
-- Drop unnecessary columns to finally get dataframe with questions and answers as columns
+- Filter records where question1 and question2 are duplicates. This results to ***149263*** records.
 
-  ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part2A/img4.PNG)
+  ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part2B/img2.PNG)
+
+- Drop unwanted columns and reset the index
+
+  ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part2B/img3.PNG)
 
 - Split the dataset into train-test set with 70:30 split ratio.
 
-- Create tokenizer to clean the dataset using spacy and create datafields [('Question', QUS), ('Answer', ANS)] with initial token as <sos>, end token as <eos>
+- Create tokenizer to clean the dataset using spacy and create datafields =  [('question1', QUS1), ('question2', QUS2)] with initial token as <sos>, end token as <eos>
 
 - build the vocab using train data using tokens with min frequency = 2
 
