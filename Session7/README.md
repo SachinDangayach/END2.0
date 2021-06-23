@@ -19,7 +19,7 @@ Assignment has got 3 parts as mentioned below along with respective solutions:
 
 ## Solution:
 
-***[Link for colab file](https://colab.research.google.com/drive/1B6LeAUgkW0q90NuaVIdK8cZ8ZOTi2M_Q?usp=sharing)***
+***[Link for colab file for Session7 part 1 submission](https://colab.research.google.com/drive/1B6LeAUgkW0q90NuaVIdK8cZ8ZOTi2M_Q?usp=sharing)***
 
   I have done the Assignment 5 by using the python package ***pytreebank*** to get the dataset. Below is the earlier submission link-
 
@@ -27,7 +27,7 @@ Assignment has got 3 parts as mentioned below along with respective solutions:
 
 ***[Prior Submission - Assignment 5 - Git Readme](https://github.com/SachinDangayach/END2.0/blob/main/Session5/README.md)***
 
-***For this submission, we have prepared the dataset directly as explained in the steps below-***
+**For this submission, we have prepared the dataset directly as explained in the steps below-**
 
   # Data
 
@@ -37,31 +37,31 @@ Assignment has got 3 parts as mentioned below along with respective solutions:
 
   2. Once we get the data and unzip the files, we start preparing the dataframes for multiple files we have got.
 
-    - Get sentiment values for phrases and convert label values to 5 buckets.
+  - Get sentiment values for phrases and convert label values to 5 buckets.
 
-    ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/img1.PNG)
+  ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/img1.PNG)
 
-    ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/img2.PNG)
+  ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/img2.PNG)
 
-    - Get all sentences in a dataframe.
+  - Get all sentences in a dataframe.
 
-    ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/img3.PNG)
+  ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/img3.PNG)
 
-    - Get the dictionary which contains all phrases and respective phrase ids.
+  - Get the dictionary which contains all phrases and respective phrase ids.
 
-    ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/img4.PNG)
+  ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/img4.PNG)
 
-    - In this dataset, each sentence is split into lowest level phrases/tokens and these phrases are provided the sentiments. These leaf level nodes are merged to get the sentiment of next level and this goes up till the entire sentence. Hence the dictionary contains all sentences with the sentiment as top level phrase or node. We can do an inner join to find these phrases.
+  - In this dataset, each sentence is split into lowest level phrases/tokens and these phrases are provided the sentiments. These leaf level nodes are merged to get the sentiment of next level and this goes up till the entire sentence. Hence the dictionary contains all sentences with the sentiment as top level phrase or node. We can do an inner join to find these phrases.
 
-    ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/img5.PNG)
+  ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/img5.PNG)
 
-    - As we need to get the sentiment of the sentences and sentiments are maintained at phrase level, we will do the inner join to get the sentiment of sentences using the dataframe from above step.
+  - As we need to get the sentiment of the sentences and sentiments are maintained at phrase level, we will do the inner join to get the sentiment of sentences using the dataframe from above step.
 
-    ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/img6.png)
+  ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/img6.png)
 
-    - To get the train test split, we will not use the train_test split dataset which has got the sentence index and split label and instead we will split the data into 70:30 ratio directly
+  - To get the train test split, we will not use the train_test split dataset which has got the sentence index and split label and instead we will split the data into 70:30 ratio directly
 
-    ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/img7.PNG)
+  ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/img7.PNG)
 
 
   # The Network / Model - Architecture
