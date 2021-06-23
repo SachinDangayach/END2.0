@@ -100,6 +100,7 @@ Assignment has got 3 parts as mentioned below along with respective solutions:
 
   ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/tests.PNG)
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## 2. Part  2: Train model we wrote in the class on the following two datasets taken from this links below:
   - http://www.cs.cmu.edu/~ark/QA-data/ (Links to an external site.)
@@ -111,8 +112,6 @@ Assignment has got 3 parts as mentioned below along with respective solutions:
 | :-------- | :------- | :------- |
 | Part 2 A | Q & A Dataset | ***[Link for colab file](https://colab.research.google.com/drive/1CjHaQtXo2AVu4qzOG_UHGALelhUYI1mR?usp=sharing)*** |
 | Part 2 B| Quora Dataset | ***[Link for colab file](https://colab.research.google.com/drive/1gVaUJifS7v8QNe0bO7NoEaKC05Ruv4lY?usp=sharing)*** |
-
-:--------------------------------------------------------------------------------
 
 ### Part 2 A Data Preparation Steps
 
