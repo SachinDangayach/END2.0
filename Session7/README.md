@@ -98,7 +98,7 @@ Assignment has got 3 parts as mentioned below along with respective solutions:
 
   ### Model results on test dataset
 
-  ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session5/Images/tests.PNG)
+  ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/tests.PNG)
 
 
 ## 2. Part  2: Train model we wrote in the class on the following two datasets taken from this links below:
@@ -143,7 +143,7 @@ I have not done any changes to model as the intent was more on data prep. work.
   ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part2A/img5.PNG)
 
 # The training
-  Model achieves nearly 47% train and 37% test accuracy in 10 epochs
+  Model achieves test ppl of 36.80 accuracy in 10 epochs
   - Training Log
 
   ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part2A/img6.PNG)
@@ -182,7 +182,7 @@ I have not done any changes to model as the intent was more on data prep. work.
   ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part2A/img5.PNG)
 
 # The training
-  Model achieves nearly 47% train and 37% test accuracy in 10 epochs
+  Model achieves nearly test ppl of 35.7 accuracy in 10 epochs
   - Training Log
 
   ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part2A/img6.PNG)
