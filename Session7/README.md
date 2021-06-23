@@ -21,11 +21,13 @@ Assignment has got 3 parts as mentioned below along with respective solutions:
 
 ***[Link for colab file](https://colab.research.google.com/drive/1B6LeAUgkW0q90NuaVIdK8cZ8ZOTi2M_Q?usp=sharing)***
 
-  I have done the Assignment 5 by using the python package ### ### to get the dataset. Below is the earlier submission link-
+  I have done the Assignment 5 by using the python package ***pytreebank*** to get the dataset. Below is the earlier submission link-
+
 ***[Prior Submission - Assignment 5 - colab](https://colab.research.google.com/drive/13-mpSe80XXG69Pz3y1SOP7HQmekAyggw?usp=sharing)***
+
 ***[Prior Submission - Assignment 5 - Git Readme](https://github.com/SachinDangayach/END2.0/blob/main/Session5/README.md)***
 
-For this submission, we have prepared the dataset directly as explained in the steps below-
+***For this submission, we have prepared the dataset directly as explained in the steps below-***
 
   # Data
 
@@ -34,23 +36,24 @@ For this submission, we have prepared the dataset directly as explained in the s
   ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/SST_Tree.png)
 
   2. Once we get the data and unzip the files, we start preparing the dataframes for multiple files we have got.
+
     - Get sentiment values for phrases and convert label values to 5 buckets.
 
-    ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/img1.png)
+    ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/img1.PNG)
 
-    ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/img2.png)
+    ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/img2.PNG)
 
     - Get all sentences in a dataframe.
 
-    ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/img3.png)
+    ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/img3.PNG)
 
     - Get the dictionary which contains all phrases and respective phrase ids.
 
-    ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/img4.png)
+    ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/img4.PNG)
 
     - In this dataset, each sentence is split into lowest level phrases/tokens and these phrases are provided the sentiments. These leaf level nodes are merged to get the sentiment of next level and this goes up till the entire sentence. Hence the dictionary contains all sentences with the sentiment as top level phrase or node. We can do an inner join to find these phrases.
 
-    ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/img5.png)
+    ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/img5.PNG)
 
     - As we need to get the sentiment of the sentences and sentiments are maintained at phrase level, we will do the inner join to get the sentiment of sentences using the dataframe from above step.
 
@@ -58,7 +61,7 @@ For this submission, we have prepared the dataset directly as explained in the s
 
     - To get the train test split, we will not use the train_test split dataset which has got the sentence index and split label and instead we will split the data into 70:30 ratio directly
 
-    ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/img7.png)
+    ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/img7.PNG)
 
 
   # The Network / Model - Architecture
@@ -67,10 +70,10 @@ For this submission, we have prepared the dataset directly as explained in the s
   below are the three classes-
 
   1. Encoder : We have used LSTMCell here so that we can unroll the RNN word by word for a given tweet. We collect the output and stack them. The final hidden state and cell state are returned along with output
-  ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/encoder.png)
+  ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/encoder.PNG)
 
   2. Decoder : Decoder takes the output from encoder as input along with last hidden and cell state as initial hidden and cell states. It runs for 1 step and its hidden state is fed to a Fully connected layer to give the output prediction vector.
-  ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/decoder.png)
+  ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/decoder.PNG)
 
   3. Seq2Seq : It connects both encode and decoder and results the prediction vector
   ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/seq2seq.png)
