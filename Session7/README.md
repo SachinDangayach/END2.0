@@ -83,7 +83,7 @@ Assignment has got 3 parts as mentioned below along with respective solutions:
 
   We went ahead with the cross entropy loss with Adam optimizer with learning rate of 1e-5 for 80 epochs and then 1e-4 for next 20 epochs
 
-  # The training
+  # The Training
 
   Trained the model for 100 epochs. Model started overfitting in most of the experiments.
 
@@ -111,6 +111,8 @@ Assignment has got 3 parts as mentioned below along with respective solutions:
 | :-------- | :------- | :------- |
 | Part 2 A | Q & A Dataset | ***[Link for colab file](https://colab.research.google.com/drive/1CjHaQtXo2AVu4qzOG_UHGALelhUYI1mR?usp=sharing)*** |
 | Part 2 B| Quora Dataset | ***[Link for colab file](https://colab.research.google.com/drive/1gVaUJifS7v8QNe0bO7NoEaKC05Ruv4lY?usp=sharing)*** |
+
+:--------------------------------------------------------------------------------
 
 ### Part 2 A Data Preparation Steps
 
@@ -142,7 +144,7 @@ I have not done any changes to model as the intent was more on data prep. work.
 
   ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part2A/img5.PNG)
 
-# The training
+# The Training
   Model achieves test ppl of 36.80 accuracy in 10 epochs
   - Training Log
 
@@ -181,7 +183,7 @@ I have not done any changes to model as the intent was more on data prep. work.
 
   ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part2A/img5.PNG)
 
-# The training
+# The Training
   Model achieves nearly test ppl of 35.7 accuracy in 10 epochs
   - Training Log
 
