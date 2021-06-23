@@ -93,12 +93,10 @@ Assignment has got 3 parts as mentioned below along with respective solutions:
   ![Training logs](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/train_logs.PNG)
 
   Train Test Loss and Accuracy plots  
+
   ![Accuracy and Loss plots](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part1/loss_acc_plots.PNG)
 
-
   ### Model results on test dataset
-
-  Model results of test dataset
 
   ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session5/Images/tests.PNG)
 
@@ -114,66 +112,78 @@ Assignment has got 3 parts as mentioned below along with respective solutions:
 | Part 2 A | Q & A Dataset | ***[Link for colab file](https://colab.research.google.com/drive/1CjHaQtXo2AVu4qzOG_UHGALelhUYI1mR?usp=sharing)*** |
 | Part 2 B| Quora Dataset | ***[Link for colab file](https://colab.research.google.com/drive/1gVaUJifS7v8QNe0bO7NoEaKC05Ruv4lY?usp=sharing)*** |
 
+### Part 2 A Data Preparation Steps
+
+CMU Question-Answers dataset contains questions and answers from prepared from Wikipedia by three successive classes in CMU. We will download the dataset from the link and follow below mentioned steps -
+
+- Download and unzip the dataset and load the files Question_Answer_Dataset_v1.2/S08/question_answer_pairs.txt, Question_Answer_Dataset_v1.2/S09/question_answer_pairs.txt , Question_Answer_Dataset_v1.2/S10/question_answer_pairs.txt into three separate dataframes.
+
+  ![S08](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part2A/img1.PNG)
+
+  ![S09](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part2A/img2.PNG)
+
+  ![S10](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part2A/img3.PNG)
+
+- Drop unnecessary columns to finally get dataframe with questions and answers as columns
+
+  ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part2A/img4.PNG)
+
+- Split the dataset containing ***3110*** records into train-test set with 70:30 split ratio.
+
+- Create tokenizer to clean the dataset using spacy and create datafields [('Question', QUS), ('Answer', ANS)] with initial token as <sos>, end token as <eos>
+
+- build the vocab using train data using tokens with min frequency = 2
+
+- Create train and test iterators
+
+# The Network / Model - Architecture
+
+I have not done any changes to model as the intent was more on data prep. work.
+
+  ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part2A/img5.PNG)
+
+# The training
+  Model achieves nearly 47% train and 37% test accuracy in 10 epochs
+  - Training Log
+
+  ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part2A/img6.PNG)
 
 
+### Part 2 B Data Preparation Steps
+
+An important product principle for Quora is that there should be a single question page for each logically distinct question. To mitigate the inefficiencies of having duplicate question pages at scale, we need an automated way of detecting if pairs of question text actually correspond to semantically equivalent queries. The dataset prepared to solve this challenging NLP problem consists of over 400,000 lines of potential question duplicate pairs. Each line contains IDs for each question in the pair, the full text for each question, and a binary value that indicates whether the line truly contains a duplicate pair.
+
+We followed following steps to build a model which can generate a similar questions given a question as input.
+
+- Download and unzip the dataset and load the files quora_duplicate_questions.tsv into dataframes. it contains ***404290*** records.
+
+  ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part2B/img1.PNG)
+
+- Drop unnecessary columns to finally get dataframe with questions and answers as columns
+
+  ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part2A/img4.PNG)
+
+- Split the dataset into train-test set with 70:30 split ratio.
+
+- Create tokenizer to clean the dataset using spacy and create datafields [('Question', QUS), ('Answer', ANS)] with initial token as <sos>, end token as <eos>
+
+- build the vocab using train data using tokens with min frequency = 2
+
+- Create train and test iterators
+
+# The Network / Model - Architecture
+
+I have not done any changes to model as the intent was more on data prep. work.
+
+  ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part2A/img5.PNG)
+
+# The training
+  Model achieves nearly 47% train and 37% test accuracy in 10 epochs
+  - Training Log
+
+  ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part2A/img6.PNG)
 
 
 
 3. Try for additional datasets the same activity what we tried above from the link mentioned below:
   - https://kili-technology.com/blog/chatbot-training-datasets
-
-
-
-
-
-# Data
-1. We load the tweet.csv file in dataframe explore the dataset
-
-![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/dataset.png)
-
-2. We clean the data and create the datasets with 70:30 train test split, and created the vocabs
-
-
-# The Network / Model - Architecture
-
-We have created as language model which is also a language model as it looks the entire sentence before predicting the sentiments.
-below are the three classes-
-
-1. Encoder : We have used LSTMCell here so that we can unroll the RNN word by word for a given tweet. We collect the output and stack them. The final hidden state and cell state are returned along with output
-![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/encoder.png)
-
-2. Decoder : Decoder takes the output from encoder as input along with last hidden and cell state as initial hidden and cell states. It runs for 1 step and its hidden state is fed to a Fully connected layer to give the output prediction vector.
-![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/decoder.png)
-
-3. Seq2Seq : It connects both encode and decoder and results the prediction vector
-![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/seq2seq.png)
-
-# The Network parameters
-
-- Training hyperparameters
-    - num_epochs = 10
-    - learning_rate = 0.001
-    - batch_size = 8
-
--  Model hyperparameters
-    - input_size_encoder = len(TEXT.vocab)
-    - input_size_decoder = 64 # Hidden dimention for output
-    - output_size = len(LABEL.vocab)
-    - encoder_embedding_size = 32
-    - cell_state_size = 64
-    - hidden_size = 64
-    - num_layers = 1
-
-# The training
-Model achieves above 70% accuracy in less than 5 epochs
-- Training Log
-
-![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/Train_logs.png)
-
-- Accuracy and Loss plots
-
-![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/Acc_Loss_plots.png)
-
-### Model results on manually / test dataset
-![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/output1.png)
-![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session6/Images/output2.png)
