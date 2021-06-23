@@ -137,13 +137,13 @@ CMU Question-Answers dataset contains questions and answers from prepared from W
 
 - Create train and test iterators
 
-# The Network / Model - Architecture
+### The Network / Model - Architecture
 
 I have not done any changes to model as the intent was more on data prep. work.
 
   ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part2A/img5.PNG)
 
-# The Training
+### The Training
   Model achieves test ppl of 36.80 accuracy in 10 epochs
   - Training Log
 
@@ -176,13 +176,13 @@ We followed following steps to build a model which can generate a similar questi
 
 - Create train and test iterators
 
-# The Network / Model - Architecture
+### The Network / Model - Architecture
 
 I have not done any changes to model as the intent was more on data prep. work.
 
   ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part2A/img5.PNG)
 
-# The Training
+### The Training
   Model achieves nearly test ppl of 35.7 accuracy in 10 epochs
   - Training Log
 
