@@ -2,7 +2,9 @@
 ### Submission by:
 1. Sachin Dangayach (sachin.dangayach@gmail.com)
 
-***[Link for colab file](https://colab.research.google.com/drive/1H2mb4kvQLa8vYGCW2QTdI5Svi8aEzIM3?usp=sharing)***
+***[Link for colab file](https://colab.research.google.com/drive/1B6LeAUgkW0q90NuaVIdK8cZ8ZOTi2M_Q?usp=sharing)***
+***[Link for colab file](https://colab.research.google.com/drive/1CjHaQtXo2AVu4qzOG_UHGALelhUYI1mR?usp=sharing)***
+***[Link for colab file](https://colab.research.google.com/drive/1gVaUJifS7v8QNe0bO7NoEaKC05Ruv4lY?usp=sharing)***
 
 # Objective
 
