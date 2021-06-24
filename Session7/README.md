@@ -192,3 +192,41 @@ I have not done any changes to model as the intent was more on data prep. work.
 
 3. Try for additional datasets the same activity what we tried above from the link mentioned below:
   - https://kili-technology.com/blog/chatbot-training-datasets
+
+Colab link : https://colab.research.google.com/drive/1lsTLU5sjJMbrZjPYHeJ88htphunc0jpI?pli=1
+
+### Part 3 Data Preparation Steps
+
+We are using the NarrativeQA Reading Comprehension Challenge Dataset. It includes the list of documents with Wikipedia summaries, links to full stories, and questions and answers. In the qaps.csv file of this dataset, we have one question and two answers to this questions based on the corresponding wiki doc.
+As our aim is to train and learn a language model, we are changing the problem here to generate a similar answer given an answer to the model. As we see, the dataset contains two different answers to a questions and their tokenzied form, what we have done here is to recreate a dataset by dropping all columns except the Answer1 and Answer2.
+Now, model gets Answer1 as input and it will predict the Answer 2 as output.
+
+We followed following steps to build a model which can generate a similar questions given a question as input.
+
+- Download and unzip the dataset and load the files https://raw.githubusercontent.com/deepmind/narrativeqa/master/qaps.csv. it contains ***46765*** records.
+
+  ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part3/img1.PNG)
+
+- Drop unwanted columns leaving only answer1 and answer2 columns
+
+  ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part3/img2.PNG)
+
+- Split the dataset into train-test set with 70:30 split ratio.
+
+- Create tokenizer to clean the dataset using spacy and create datafields =  [('answer1', ANS1), ('answer2', ANS2)] with initial token as <sos>, end token as <eos>
+
+- build the vocab using train data using tokens with min frequency = 2
+
+- Create train and test iterators
+
+### The Network / Model - Architecture
+
+I have not done any changes to model as the intent was more on data prep. work.
+
+  ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part3/img3.PNG)
+
+### The Training
+  Model achieves nearly test ppl of 32.5 in 10 epochs
+  - Training Log
+
+  ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part3/img4.PNG)
