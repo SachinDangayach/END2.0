@@ -199,7 +199,7 @@ I have not done any changes to model as the intent was more on data prep. work.
 | :-------- | :------- | :------- |
 | Part 3| NarrativeQA Dataset | ***[Link for colab file](https://colab.research.google.com/drive/1lsTLU5sjJMbrZjPYHeJ88htphunc0jpI?usp=sharing)*** |
 
-We are using the NarrativeQA Reading Comprehension Challenge Dataset. It includes the list of documents with Wikipedia summaries, links to full stories, and questions and answers. In the qaps.csv file of this dataset, we have one question and two answers to this questions based on the corresponding wiki doc.
+We are using the NarrativeQA Reading Comprehension Challenge Dataset (https://github.com/deepmind/narrativeqa). It includes the list of documents with Wikipedia summaries, links to full stories, and questions and answers. In the qaps.csv file of this dataset, we have one question and two answers to this questions based on the corresponding wiki doc.
 As our aim is to train and learn a language model, we are changing the problem here to generate a similar answer given an answer to the model. As we see, the dataset contains two different answers to a questions and their tokenzied form, what we have done here is to recreate a dataset by dropping all columns except the Answer1 and Answer2.
 Now, model gets Answer1 as input and it will predict the Answer 2 as output.
 
