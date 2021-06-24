@@ -193,7 +193,7 @@ I have not done any changes to model as the intent was more on data prep. work.
 3. Try for additional datasets the same activity what we tried above from the link mentioned below:
   - https://kili-technology.com/blog/chatbot-training-datasets
 
-Colab link : https://colab.research.google.com/drive/1lsTLU5sjJMbrZjPYHeJ88htphunc0jpI?pli=1
+| Part 3| NarrativeQA Dataset | ***[Link for colab file](https://colab.research.google.com/drive/1lsTLU5sjJMbrZjPYHeJ88htphunc0jpI?usp=sharing)*** |
 
 ### Part 3 Data Preparation Steps
 
