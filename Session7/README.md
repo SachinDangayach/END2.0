@@ -188,9 +188,9 @@ I have not done any changes to model as the intent was more on data prep. work.
 
   ![alt](https://github.com/SachinDangayach/END2.0/blob/main/Session7/Utils/Part2A/img6.PNG)
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-3. Try for additional datasets the same activity what we tried above from the link mentioned below:
+## 3. Try for additional datasets the same activity what we tried above from the link mentioned below:
   - https://kili-technology.com/blog/chatbot-training-datasets
 
 ### Part 3 Data Preparation Steps
