@@ -7,3 +7,4 @@
 ## Session 5: [First Hands-on](https://github.com/SachinDangayach/END2.0/tree/main/Session5)
 ## Session 6: [GRUs, Seq2Seq and Introduction to Attention Mechanism](https://github.com/SachinDangayach/END2.0/tree/main/Session6)
 ## Session 7: [Second Hands-on](https://github.com/SachinDangayach/END2.0/tree/main/Session7)
+## Session 8: [Training NLP Models](https://github.com/SachinDangayach/END2.0/tree/main/Session8)
