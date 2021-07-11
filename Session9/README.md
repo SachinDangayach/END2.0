@@ -83,7 +83,7 @@ I used the prior code for sentiment analysis model and changed it to calculate r
 
   ![ALT](https://github.com/SachinDangayach/END2.0/blob/main/Session9/images/1_4.PNG)
 
-  As we can see, Model training accuracy for epoch20 is just ~39%. It reelected in score metrics also as-
+  As we can see, Model training accuracy for epoch20 is just ~39%. It reflected in score metrics also as-
 
   we see, low precision (<.60) for all classes. It means whatever model is predicting has low confidence. Its doing lots of miss classification by classifying wrongly other sentiment to the one we are calculating score for.
 
@@ -141,7 +141,7 @@ I have used my existing code to predict the answer for a question. The model was
 
 ![Training Logs](https://github.com/SachinDangayach/END2.0/blob/main/Session9/images/3_2.PNG)
 
-We can see the Perplexity score (based on unigram) going down from epoch 1 to epoch 190 but still it is as high as 47 from training and 36 for test set. This is due to the model not performing well for the task. With a better model with proper training, the scores should go down and we should better results.
+We can see the Perplexity score (based on unigram) going down from epoch 1 to epoch 10 but still it is as high as 47 from training and 36 for test set. This is due to the model not performing well for the task. With a better model with proper training, the scores should go down and we should better results.
 
 ## BERTScore
 
@@ -166,5 +166,5 @@ I have used the standard bert_score package (code- from bert_score import score)
 
 ![Training Logs](https://github.com/SachinDangayach/END2.0/blob/main/Session9/images/4_2.PNG)
 
-We can see the BERTScore score as to be as low . This is due to the model not performing well for the task. With a better model with proper training, the scores should improve as in that case the model will have similar ( in meaning also) actual and predicted tokens list and thus it will generate similar embeddings resulting high bert scores.
+We can see the train BERTScore F1 score as to be as low .5. This is due to the model not performing well for the task. With a better model with proper training, the scores should improve as in that case the model will have similar ( in meaning also) actual and predicted tokens list and thus it will generate similar embeddings resulting high bert scores.
 Also, due to limited RAM, I was not able to calculate the BERTScore for more epochs and the system was crashing and hence I have kept it for only one epoch.
