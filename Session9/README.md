@@ -63,7 +63,7 @@ However, Recall is to measure such quality with respect to the mistakes we did (
 
 ***Why Recall is important*** Suppose we have a weather forecasting device; to predict rainy days. If this device has a high precision, it means when it says “it is going to rain”, we can trust it. But this doesn’t give us any information about all the times it says “it is not going to rain”! If the false claims is going to be costly for our business, then we might want to ask about the number of times this device misses a rainy day.
 
-####F1 Score#### represents the mean ( Harmonic mean) of recall and precision. We should be careful while using the F1 score and in general it gives equal weightage to both recall and precision though the importance of recall and precision could vary case by case as a model to predict a cancer patient will need to have high recall also.
+***F1 Score*** represents the mean ( Harmonic mean) of recall and precision. We should be careful while using the F1 score and in general it gives equal weightage to both recall and precision though the importance of recall and precision could vary case by case as a model to predict a cancer patient will need to have high recall also.
 
 We can extend the understanding to multiclass problems by a fine tweak of considering all the other classes as negative while making predictions and calculating recall/precision for a class.
 
