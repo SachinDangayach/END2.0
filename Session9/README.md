@@ -53,13 +53,13 @@ F1 = 2 * ( Recall * Precision) / (Recall + Precision)
 
 Precision is to measure the quality of our predictions only based on what our predictor claims to be positive (regardless of all it might miss):
 
-####Precision = All we predicted correctly / All we predicted, correctly or wrongly####
+***Precision = All we predicted correctly / All we predicted, correctly or wrongly***
 
 ***Why precision is important then?*** Imagine our device is so stupid that it ALWAYS claims that “tomorrow is going to rain”! Then, surprisingly, it is not going to mis-predict one single rainy day! That means: Recall = 100%! Should I conclude that this is a perfect device? No, I should ask for precision now.
 
 However, Recall is to measure such quality with respect to the mistakes we did (what should have been predicted as positive but we flagged as negative ):
 
-####Recall = All we predicted correctly / All we should have predicted####
+***Recall = All we predicted correctly / All we should have predicted***
 
 ***Why Recall is important*** Suppose we have a weather forecasting device; to predict rainy days. If this device has a high precision, it means when it says “it is going to rain”, we can trust it. But this doesn’t give us any information about all the times it says “it is not going to rain”! If the false claims is going to be costly for our business, then we might want to ask about the number of times this device misses a rainy day.
 
@@ -69,7 +69,7 @@ We can extend the understanding to multiclass problems by a fine tweak of consid
 
 - ***Implementation***
 
-I used the prior code for sentiment analysis model and changed it to calculate recall, precision etc for every epoch.
+I used the prior code for sentiment analysis model and changed it to calculate recall, precision etc. for every epoch.
 
   - ***Dataset:*** stanfordSentimentTreebank
 
@@ -93,15 +93,27 @@ I used the prior code for sentiment analysis model and changed it to calculate r
 
 - ***Explanation of BLEU score***
 
+BLEU (Bilingual Evaluation Understudy) score is a measure to present how many n-grams are present it the predicted score in comparison to the actual. It lies between 0 to 1 as max we can have is the case where the predicted and actual case are identical and thus we can find all possible n-grams (ordered sequence of words of specific length). BLUE4 counts n-grams up to length 4.
+
 - ***Intuition***
+
+We can assume that if the model is predicting absolutely as expected for a task like Q&A or language translation, the words and their order should be similar. Though this doesn't stands out as true assumption as two sentences could convey the same message while using different words and in different order also. For example, answer to the question, which is your favorite sports, one can answer, I like cricket and the other answer could be cricket is my favorite sport. Here we will have a very poor BLEU score though both convey same answer. On the contrary, I like soccer, will have high BLUE score though both are different answers. High BLEU score could be a good measure for specific cases like predicting the full form of a acronyms.
 
 - ***Implementation***
 
-  - ***Dataset:***
+I have used my existing code to predict the answer for a question. The model was not performing good and this will be reflected in BLEW score also.
 
-  - ***Model:***
+  - ***Dataset:*** CMU Question Answer Dataset
+
+  - ***Model:*** Encoder Decoder ( Seq2Seq Model )
+
+![BLEU Score Implement](https://github.com/SachinDangayach/END2.0/blob/main/Session9/images/2_1.PNG)
 
 - ***Logs***
+
+![Training Logs](https://github.com/SachinDangayach/END2.0/blob/main/Session9/images/2_2.PNG)
+
+We can see the BLEU score as to be as low as 0.05. This is due to the model not performing well for the task. With a better model with proper training, the scores should improve and the probabilities of finding similar n-grams in test and actual should increase.
 
 ## Perplexity
 
