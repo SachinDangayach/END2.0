@@ -24,17 +24,70 @@
 ## Recall, Precision, and F1 Score
 
 - ***Explanation of Recall, Precision, and F1 score***
+Recall, Precision, F1 scores and the metrics used for classification problems best suited for binary classifications but can be extended to multiclass problems.
+We need these scores as accuracy alone is not sufficient to represent models performance. Lets take an example to understand it better.
 
+![Confusion Matrix](https://github.com/SachinDangayach/END2.0/blob/main/Session9/images/1_1.PNG)
+
+TP = True Positive
+
+TN = True Negative
+
+FP = False Positive
+
+FN = False Negative
+
+A confusion matrix as mentioned above shows the actual verses predictions by any model. We have chosen a binary model (dog or no dog).
+
+Accuracy = TP / (TP+FP+TN+FN)
+
+Recall = TP / (TP+FN)
+
+Precision = TP / (TP + FP)
+
+F1 = 2 * ( Recall * Precision) / (Recall + Precision)
 
 - ***Intuition***
 
+![ALT](https://github.com/SachinDangayach/END2.0/blob/main/Session9/images/1_2.PNG)
+
+Precision is to measure the quality of our predictions only based on what our predictor claims to be positive (regardless of all it might miss):
+
+####Precision = All we predicted correctly / All we predicted, correctly or wrongly####
+
+***Why precision is important then?*** Imagine our device is so stupid that it ALWAYS claims that “tomorrow is going to rain”! Then, surprisingly, it is not going to mis-predict one single rainy day! That means: Recall = 100%! Should I conclude that this is a perfect device? No, I should ask for precision now.
+
+However, Recall is to measure such quality with respect to the mistakes we did (what should have been predicted as positive but we flagged as negative ):
+
+####Recall = All we predicted correctly / All we should have predicted####
+
+***Why Recall is important*** Suppose we have a weather forecasting device; to predict rainy days. If this device has a high precision, it means when it says “it is going to rain”, we can trust it. But this doesn’t give us any information about all the times it says “it is not going to rain”! If the false claims is going to be costly for our business, then we might want to ask about the number of times this device misses a rainy day.
+
+####F1 Score#### represents the mean ( Harmonic mean) of recall and precision. We should be careful while using the F1 score and in general it gives equal weightage to both recall and precision though the importance of recall and precision could vary case by case as a model to predict a cancer patient will need to have high recall also.
+
+We can extend the understanding to multiclass problems by a fine tweak of considering all the other classes as negative while making predictions and calculating recall/precision for a class.
+
 - ***Implementation***
 
-  - ***Dataset:***
+I used the prior code for sentiment analysis model and changed it to calculate recall, precision etc for every epoch.
 
-  - ***Model:***
+  - ***Dataset:*** stanfordSentimentTreebank
 
-- ***Logs***
+  - ***Model:*** RNN ( GRU )
+
+  - ***Code snippet for metrics***
+
+  ![ALT](https://github.com/SachinDangayach/END2.0/blob/main/Session9/images/1_3.PNG)
+
+- ***Logs for last epochs***
+
+  ![ALT](https://github.com/SachinDangayach/END2.0/blob/main/Session9/images/1_4.PNG)
+
+  As we can see, Model training accuracy for epoch20 is just ~39%. It reelected in score metrics also as-
+
+  we see, low precision (<.60) for all classes. It means whatever model is predicting has low confidence. Its doing lots of miss classification by classifying wrongly other sentiment to the one we are calculating score for.
+
+  except one class, all scores for Recall are lesser than 60 showing model is not able to select all the relevant cases for a particular sentiment or in other words the model is missing to predict the sentiment class for many cases.
 
 ## BLEU
 
