@@ -119,26 +119,52 @@ We can see the BLEU score as to be as low as 0.05. This is due to the model not 
 
 - ***Explanation of Perplexity score***
 
+As we have can  see, the bleu score will become significantly lower as text size increase, to overcome this, we came up with idea of perplexity which can be thought of as the reciprocal of probability, normalized by the sequence of length. Perplexity is related to entropy in a way that adding more sentences introduces more uncertainty. So other things being equal a larger test set is likely to have a lower probability than a smaller one. Ideally, we’d like to have a metric that is independent of the size of the dataset. We could obtain this by normalizing the probability of the test set by the total number of words, which would give us a per-word measure.
+
+We can interpret perplexity as the weighted branching factor. If we have a perplexity of 100, it means that whenever the model is trying to guess the next word it is as confused as if it had to pick between 100 word.
+
 - ***Intuition***
+
+Meaning of perplexity is confusion. As we have experienced, when a small kid starts talking, the words, and sentences are not clear during initial days. We will be many times confused or perplexed with what the kid is trying to convey. Over the period of time the kid will learn and improve and will start making correct sentences which are easy to comprehend. Going by the same analogy, when a model ( lets assume for language translation) is not trained properly the output will be confusing and this resulting high perplexity score. But, as the model learns better, we will start getting better output and thus less confusing output and hence the perplexity score will go down.
 
 - ***Implementation***
 
-  - ***Dataset:***
+I have used my existing code to predict the answer for a question. The model was not performing good and this will be reflected in Perplexity score also.
 
-  - ***Model:***
+  - ***Dataset:*** CMU Question Answer Dataset
+
+  - ***Model:*** Encoder Decoder ( Seq2Seq Model )
+
+![Perplexity Score Implement](https://github.com/SachinDangayach/END2.0/blob/main/Session9/images/3_1.PNG)
 
 - ***Logs***
+
+![Training Logs](https://github.com/SachinDangayach/END2.0/blob/main/Session9/images/3_2.PNG)
+
+We can see the Perplexity score (based on unigram) going down from epoch 1 to epoch 190 but still it is as high as 47 from training and 36 for test set. This is due to the model not performing well for the task. With a better model with proper training, the scores should go down and we should better results.
 
 ## BERTScore
 
 - ***Explanation of BERTScore score***
 
 - ***Intuition***
+The basis of metrics like BERTScore etc. can be understood from the analogy like if a person has good understanding of physics and computer science and got many publications on his/her name, the chances of that person to be good in math is high. Using this analogy, if we use the prediction of model and actual text and both results similar results (in terms of embeddings) by BERT model, the chances of the model working good are very high.
 
 - ***Implementation***
 
-  - ***Dataset:***
+I have used my existing code to predict the answer for a question. The model was not performing good and this will be reflected in BERTScore also.
 
-  - ***Model:***
+  - ***Dataset:*** CMU Question Answer Dataset ( I have reduced the dataset size due to hardware constraints)
+
+  - ***Model:*** Encoder Decoder ( Seq2Seq Model )
+
+I have used the standard bert_score package (code- from bert_score import score)
+
+![BERTScore Implement](https://github.com/SachinDangayach/END2.0/blob/main/Session9/images/4_1.PNG)
 
 - ***Logs***
+
+![Training Logs](https://github.com/SachinDangayach/END2.0/blob/main/Session9/images/4_2.PNG)
+
+We can see the BERTScore score as to be as low . This is due to the model not performing well for the task. With a better model with proper training, the scores should improve as in that case the model will have similar ( in meaning also) actual and predicted tokens list and thus it will generate similar embeddings resulting high bert scores.
+Also, due to limited RAM, I was not able to calculate the BERTScore for more epochs and the system was crashing and hence I have kept it for only one epoch.
