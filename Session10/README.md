@@ -1,32 +1,14 @@
 
-### Submission by:
-1. Sachin Dangayach (sachin.dangayach@gmail.com)
+### Submission by Sachin Dangayach (sachin.dangayach@gmail.com)
 
 # Objective
 
-## 1. Implement the following metrics (either on separate models or same, your choice):
-- Recall, Precision, and F1 Score
-- BLEU
-- Perplexity (explain whether you are using bigram, trigram, or something else, what does your PPL score represent?)
-- BERTScore
+## Replace the embeddings of this session's code with GloVe embeddings and explain the difference between -
+
+***[Session code](https://colab.research.google.com/drive/19pMTnQlp6YItdmIuj5V3s9X7VR1W0sF9?usp=sharing)*** and ***[Your code](https://colab.research.google.com/drive/1P_G1h-M1-Z87tzur8D1dmCk9Kp2ZfBZA)*** .
 
 ## Solution:
 
-***[Link for colab file for Session7 part 1 submission](https://colab.research.google.com/drive/1B6LeAUgkW0q90NuaVIdK8cZ8ZOTi2M_Q?usp=sharing)***
-
-| Metrics | Link     |
-| :-------- | :------- |
-| `Recall, Precision, and F1 Score` | ***[Recall, Precision, and F1 Score](https://colab.research.google.com/drive/162bjGKjd0yoEaOMHuSMI5lnJgEp0F19t?usp=sharing)*** |
-| `BLEU` | ***[BLEU](https://colab.research.google.com/drive/1hgLps6L0yQ6_rs8Hjmv5-UFg-vkPpmsA?usp=sharing)*** |
-| `Perplexity` | ***[Perplexity](https://colab.research.google.com/drive/14IT1IX5NlpX69rG9RG0kVSE2CoLaRRe_?usp=sharing)*** |
-| `BERTScore` | ***[BERTScore](https://colab.research.google.com/drive/13NtGgFdGg9qcYVPtxJTAGRAfgjhC0nsb?usp=sharing)*** |
-
-**For this submission, we have prepared the dataset directly as explained in the steps below-**
-
-## Recall, Precision, and F1 Score
-
-## BLEU
-
-## Perplexity
-
-## BERTScore
+| Git Link     | Colab Link     |
+| :------------- | :------------- |
+| Item One       | https://colab.research.google.com/drive/1P_G1h-M1-Z87tzur8D1dmCk9Kp2ZfBZA |
