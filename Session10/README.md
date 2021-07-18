@@ -77,9 +77,9 @@ An attention based Seq2Seq model has three component -
 
 - Below are training and evaluation snapshot
 
-![Original Model Train Log](https://github.com/SachinDangayach/END2.0/blob/main/Session10/images/i_6.PNG)
+![Original Model Train Log](https://github.com/SachinDangayach/END2.0/blob/main/Session10/images/i_7.PNG)
 
-![Original Model Evaluation](https://github.com/SachinDangayach/END2.0/blob/main/Session10/images/i_7.PNG)
+![Original Model Evaluation](https://github.com/SachinDangayach/END2.0/blob/main/Session10/images/i_8.PNG)
 
 ## Observations
 
@@ -87,9 +87,9 @@ An attention based Seq2Seq model has three component -
 
 | S. No. | Input in English    | Model 1 with GloVe embeddings    | Model 2 without GloVe embeddings     | Results    |
 | :------------- | :------------- |:------------- |:------------- |:------------- |
-| 1.      | she is five years younger than me | elle a deux ans plus que moi . <EOS> | elle est ans ans plus . que moi . <EOS> | ** Model 1 preforms better ** |
-| 2.      | she is too small | elle est trop . <EOS> | elle est trop et ur . <EOS> | ** Model 1 preforms better ** |
-| 3.      | i am not afraid of dying | je n ai pas peur . <EOS> | je ne ai pas peur avec . <EOS>| ** Model 1 preforms better ** |
-| 4.      | he is a young director full of talent | c est un homme de jeune . . <EOS> | c est un homme de de de . . .| ** Model 1 preforms better ** |
+| 1.      | she is five years younger than me | elle a deux ans plus que moi . <EOS> | elle est ans ans plus . que moi . <EOS> | **Model 1 preforms better** |
+| 2.      | she is too small | elle est trop . <EOS> | elle est trop et ur . <EOS> | **Model 1 preforms better** |
+| 3.      | i am not afraid of dying | je n ai pas peur . <EOS> | je ne ai pas peur avec . <EOS>| **Model 1 preforms better** |
+| 4.      | he is a young director full of talent | c est un homme de jeune . . <EOS> | c est un homme de de de . . .| **Model 1 preforms better** |
 
-** Cleary model with GloVe word embeddings performs better**
+**Cleary model with GloVe word embeddings performs better**
