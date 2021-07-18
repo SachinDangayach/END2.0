@@ -85,11 +85,11 @@ An attention based Seq2Seq model has three component -
 
 - Below mentioned table summarizes the evaluation results mentioned above for test examples used for both models -
 
-| S. No. | Input in English    | Model 1 with GloVe embeddings    | Model 2 without GloVe embeddings     | Results    |
+| S. No. | Input in English    | Model 1 with GloVe embeddings    | Model 2 without GloVe embeddings     | Results validated with google translate    |
 | :------------- | :------------- |:------------- |:------------- |:------------- |
 | 1.      | she is five years younger than me | elle a deux ans plus que moi . <EOS> | elle est ans ans plus . que moi . <EOS> | **Model 1 preforms better** |
-| 2.      | she is too small | elle est trop . <EOS> | elle est trop et ur . <EOS> | **Model 1 preforms better** |
-| 3.      | i am not afraid of dying | je n ai pas peur . <EOS> | je ne ai pas peur avec . <EOS>| **Model 1 preforms better** |
+| 2.      | she is too small | elle est trop . <EOS> | elle est trop et ur . <EOS> | **Both model results are bad** |
+| 3.      | i am not afraid of dying | je n ai pas peur . <EOS> | je ne ai pas peur avec . <EOS>| **Both model results are bad** |
 | 4.      | he is a young director full of talent | c est un homme de jeune . . <EOS> | c est un homme de de de . . .| **Model 1 preforms better** |
 
 **Cleary model with GloVe word embeddings performs better**
