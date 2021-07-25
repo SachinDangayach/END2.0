@@ -56,6 +56,10 @@
 
           encoder_outputs[i] += output[0,0]
 
+      ***output***
+
+      ![Encoder output](https://github.com/SachinDangayach/END2.0/blob/main/Session11/images/i_1.PNG)
+
 
 ## Feed forward steps for decoder
 
