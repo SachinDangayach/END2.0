@@ -64,5 +64,36 @@
 
 ## Feed forward steps for decoder
 
+- First input to the decoder will be SOS_token, later inputs would be the words it predicted (unless we implement teacher forcing).
+
+- Decoder/LSTM's hidden state will be initialized with the encoder's last hidden state. We will use LSTM's hidden state and last prediction to generate attention weight using a FC layer.
+
+- This attention weight will be used to weigh the encoder_outputs using batch matric multiplication. This will give us a NEW view on how to look at encoder_states. this attention applied encoder_states will then be concatenated with the input, and then sent a linear layer and then sent to the LSTM. LSTM's output will be sent to a FC layer to predict one of the output_language words
+
+  - Define the first input for Decoder as -
+
+    - decoder_input = tensor of index for SOS token
+
+    - decoder_hidden = encoder_hidden and decoder_ct = encoder_ct
+
+  - Create decoder embedding layer ( input size = number of words in output language, output dimension = 256)
+
+      output, (decoder_hidden,decoder_ct) = lstm(input_to_lstm.unsqueeze(0), (decoder_hidden,decoder_ct))
+
+      output.shape, decoder_hidden.shape
+
 
 ## Attention Mechanism
+
+- We define attention layer by concatenating the embeddings and last decoder hidden state and giving as input to the fully connected layer
+
+    attn_weight_layer = nn.Linear(256 * 2, 10).to(device)
+
+    attn_weights = attn_weight_layer(torch.cat((embedded[0], decoder_hidden[0]), 1))
+
+    attn_weights = F.softmax(attn_weights, dim = 1)
+
+
+## Output
+
+![Output](https://github.com/SachinDangayach/END2.0/blob/main/Session11/images/i_2.PNG)
