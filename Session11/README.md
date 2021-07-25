@@ -10,7 +10,51 @@
 
 # Solution -
 
+## Data Preparation
+
+    - Download the data
+
+    - Create the lang class with methods to maintain word2index, word2count, index2word dictionaries and total number of words
+
+    - Create methods to normalize and read dataset while provide list of sentences in languages as well as language pair as output
+
+    - Prepare dataset of the French and the English translations of French sentences along with list of tuples as pairs while applying filter of max length 10 for sentences
+
 ## Feed forward steps for encoder
+
+    - To feed the sentences to LSTM, we need to have the convert the input sentences to Embeddings and those Embeddings to tensors
+
+      - Take the input language sentences, and split it into a list of words/tokens
+
+      - Find the index of each words in the list to create a list of index, append EOS index and convert it into a tensor to get the input and output tensors
+
+      - Define Embedding layer and LSTM layer for encoder
+
+        embedding = nn.Embedding(input_size, hidden_size).to(device)
+
+        lstm = nn.LSTM(hidden_size, hidden_size).to(device)
+
+      -  Build LSTM, initialize the hidden state and cell state with Zeros(Empty state)
+
+        (hidden,ct) = torch.zeros(1, 1, 256, device=device),torch.zeros(1, 1, 256, device=device)
+
+        embedded_input = embedding(input_tensor[0].view(-1, 1))
+
+        output, (hidden,ct) = lstm(embedded_input, (hidden,ct))
+
+      - Define a empty tensor with size MAX_LENGTH to store the Encoder outputs. Then we can get the encoder outputs for each of the word in the Sentence
+
+        encoder_outputs = torch.zeros(MAX_LENGTH, 256, device=device)
+
+        (encoder_hidden,encoder_ct) = torch.zeros(1, 1, 256, device=device),torch.zeros(1, 1, 256, device=device)
+
+        for i in range(input_tensor.size()[0]):  
+
+          embedded_input = embedding(input_tensor[i].view(-1, 1))
+
+          output, (encoder_hidden,encoder_ct) = lstm(embedded_input, (encoder_hidden,encoder_ct))
+
+          encoder_outputs[i] += output[0,0]
 
 
 ## Feed forward steps for decoder
