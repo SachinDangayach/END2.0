@@ -11,3 +11,4 @@
 ## Session 9: [Learning Rates and Evaluation Metrics Part 1](https://github.com/SachinDangayach/END2.0/tree/main/Session9)
 ## Session 10: [3rd Handson - Language Translation using Seq2Seq with Attention](https://github.com/SachinDangayach/END2.0/tree/main/Session10)
 ## Session 11: [Advanced Concepts](https://github.com/SachinDangayach/END2.0/tree/main/Session11)
+## Session 12: [The Dawn of Transformers](https://github.com/SachinDangayach/END2.0/tree/main/Session12)
