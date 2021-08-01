@@ -14,7 +14,7 @@
 
 ## Dataset Used
 
-    - MultiK30 Dataset
+    - MultiK30 Dataset (German to English)
 
 ## Problem Description
 
