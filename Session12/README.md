@@ -10,17 +10,17 @@
 
 # Solution -
 
-[Colab Link](https://colab.research.google.com/drive/16rrx_ow0wbFDR2G1lyAlPkk7_S7_aoyE?usp=sharing)
+[Colab Link](https://colab.research.google.com/drive/13v_KZT_9lUon0xLnHyKdxapTIrm4p8nE?usp=sharing)
 
 ## Dataset Used
 
-    -
+    - MultiK30 Dataset
 
 ## Problem Description
 
-    -
+    - Translate text from German to English
 
 
 ## Top 10 epochs
 
-!Training Epochs Image](https://github.com/SachinDangayach/END2.0/blob/main/Session12/images/i_1.PNG)
+![Training Epochs Image](https://github.com/SachinDangayach/END2.0/blob/main/Session12/images/i_1.PNG)
