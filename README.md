@@ -1,4 +1,4 @@
-# END2Assignment by Sachin Dangayach
+# END2 Assignments by Sachin Dangayach
 
 ## Session 1: [Background & Very Basics](https://github.com/SachinDangayach/END2.0/tree/main/Session1)
 ## Session 2: [BackProp, Embeddings and Language Models](https://github.com/SachinDangayach/END2.0/tree/main/Session2)
@@ -9,6 +9,6 @@
 ## Session 7: [Second Hands-on](https://github.com/SachinDangayach/END2.0/tree/main/Session7)
 ## Session 8: [Training NLP Models](https://github.com/SachinDangayach/END2.0/tree/main/Session8)
 ## Session 9: [Learning Rates and Evaluation Metrics Part 1](https://github.com/SachinDangayach/END2.0/tree/main/Session9)
-## Session 10: [3rd Handson - Language Translation using Seq2Seq with Attention](https://github.com/SachinDangayach/END2.0/tree/main/Session10)
+## Session 10: [3rd Hands on - Language Translation using Seq2Seq with Attention](https://github.com/SachinDangayach/END2.0/tree/main/Session10)
 ## Session 11: [Advanced Concepts](https://github.com/SachinDangayach/END2.0/tree/main/Session11)
 ## Session 12: [The Dawn of Transformers](https://github.com/SachinDangayach/END2.0/tree/main/Session12)
